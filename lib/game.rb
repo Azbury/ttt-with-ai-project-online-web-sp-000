@@ -76,9 +76,6 @@ class Game
      else
        puts "Cat's Game!"
        "draw"
-
-     else
-       puts "Cat's Game!"
      end
    else
      turn
