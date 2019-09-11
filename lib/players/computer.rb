@@ -83,28 +83,18 @@ module Players
       else
         other_player_token = "X"
       end
-<<<<<<< HEAD
       original_cells = []
       cells.each {|cell| original_cells << cell}
       while counter < 9
         if original_cells[counter] == " "
-=======
-      original_cells = cells.dup
-      while counter < 9
-        if original_cells[counter] != " "
->>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
           original_cells[counter] = other_player_token
           if won?(original_cells)
             return (counter + 1).to_s
           else
             counter += 1
           end
-<<<<<<< HEAD
           original_cells = []
           cells.each {|cell| original_cells << cell}
-=======
-          original_cells = cells.dup
->>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
         else
           counter += 1
         end
