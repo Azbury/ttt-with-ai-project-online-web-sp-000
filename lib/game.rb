@@ -153,15 +153,5 @@ class Game
     if input == "Y"
       Game.start
     end
-    game.play
-    puts "Would you like to play again? (Y or N)"
-    input = gets.strip
-    until input == "Y" || input == "N"
-      puts "Please enter either Y or N"
-      input = gets.strip
-    end
-    if input == "Y"
-      Game.start
-    end
   end
 end
