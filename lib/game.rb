@@ -72,10 +72,15 @@ class Game
    if over? || won? || draw?
      if won?
        puts "Congratulations #{winner}!"
+<<<<<<< HEAD
        winner
      else
        puts "Cat's Game!"
        "draw"
+=======
+     else
+       puts "Cat's Game!"
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
      end
    else
      turn
@@ -153,5 +158,18 @@ class Game
     if input == "Y"
       Game.start
     end
+<<<<<<< HEAD
+=======
+    game.play
+    puts "Would you like to play again? (Y or N)"
+    input = gets.strip
+    until input == "Y" || input == "N"
+      puts "Please enter either Y or N"
+      input = gets.strip
+    end
+    if input == "Y"
+      Game.start
+    end
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
   end
 end

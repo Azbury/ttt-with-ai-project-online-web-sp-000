@@ -26,8 +26,13 @@ module Players
       elsif board.turn_count == 3 && (board.position(1) == board.position(9) || board.position(3) == board.position(7))
         "2"
       else
+<<<<<<< HEAD
         winner = can_win_next_turn?(board.cells)
         other_player_winner = other_player_can_win_next_turn?(board.cells)
+=======
+        winner = can_win_next_turn?(board.cells.dup)
+        other_player_winner = other_player_can_win_next_turn?(board.cells.dup)
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
         if winner
           winner
         elsif other_player_winner
@@ -56,18 +61,28 @@ module Players
 
     def can_win_next_turn? (cells)
       counter = 0
+<<<<<<< HEAD
       original_cells = []
       cells.each {|cell| original_cells << cell}
       while counter < 9
         if original_cells[counter] == " "
+=======
+      original_cells = cells.dup
+      while counter < 9
+        if original_cells[counter] != " "
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
           original_cells[counter] = self.token
           if won?(original_cells)
             return (counter + 1).to_s
           else
             counter += 1
           end
+<<<<<<< HEAD
           original_cells = []
           cells.each {|cell| original_cells << cell}
+=======
+          original_cells = cells.dup
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
         else
           counter += 1
         end
@@ -83,18 +98,28 @@ module Players
       else
         other_player_token = "X"
       end
+<<<<<<< HEAD
       original_cells = []
       cells.each {|cell| original_cells << cell}
       while counter < 9
         if original_cells[counter] == " "
+=======
+      original_cells = cells.dup
+      while counter < 9
+        if original_cells[counter] != " "
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
           original_cells[counter] = other_player_token
           if won?(original_cells)
             return (counter + 1).to_s
           else
             counter += 1
           end
+<<<<<<< HEAD
           original_cells = []
           cells.each {|cell| original_cells << cell}
+=======
+          original_cells = cells.dup
+>>>>>>> 079de71ea6ee2e758052a8842cac4a603f8f77b1
         else
           counter += 1
         end
